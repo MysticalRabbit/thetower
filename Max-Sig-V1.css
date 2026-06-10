@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+.max-sig {
+  width: 290px;
+  height: 200px;
+  background-image: url(https://i.imgur.com/w4uG8oI.png);
+  background-size: cover;
+  margin: 0 auto;
+  outline: 7px solid #141414;
+  border: 1px dotted #DD9A3C;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  box-sizing: border-box;
+  transition: 0.3s;
+  position: relative;
+}
+.max-sig:hover {
+  background-image: url(https://i.imgur.com/yfMS0TB.png);
+}
+.max-sig:hover .m-tit {
+  left: -15px;
+  opacity: 0;
+}
+.max-sig:hover .m-tit span {
+  left: 30px;
+}
+.max-sig .m-tit {
+  font: 600 16px "Playfair Display";
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 0;
+  transition: 0.3s;
+}
+.max-sig .m-tit span {
+  font: 600 6px "Gelasio";
+  letter-spacing: 3px;
+  padding: 2px 5px;
+  margin: 2px 0 0;
+  position: relative;
+  left: 0;
+  transition: 0.3s;
+}
+
+.max-sig .m-txt {
+  font: 600 7.5px "Gelasio";
+  letter-spacing: 0.5px;
+  position: absolute;
+  width: calc(100% - 30px);
+  text-align: center;
+  bottom: 10px;
+  transition: 0.3s 0;
+  opacity: 0;
+}
+.max-sig:hover .m-txt {
+  bottom: 15px;
+  opacity: 1;
+  transition: 0.3s 0.6s;
+}
+
+.m-bg, k {
+  background: #DD9A3C;
+  background: linear-gradient(90deg, #dd9a3c 0%, rgba(221, 154, 60, 0) 100%);
+  padding: 0 4px;
+  display: inline-block;
+}
+
+.m-rep {
+  width: 20px;
+  height: 20px;
+  display: block;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto 5px;
+}
+.m-rep audio {
+  filter: brightness(55%) sepia(1) hue-rotate(355deg);
+  transform: scale(0.8);
+  transform-origin: 0;
+  position: relative;
+  right: 10.5px;
+  top: -17px;
+}
