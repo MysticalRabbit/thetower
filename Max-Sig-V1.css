@@ -2,7 +2,7 @@
 .max-sig {
   width: 290px;
   height: 200px;
-  background-image: url(https://i.imgur.com/w4uG8oI.png);
+  background-image: url(https://i.imgur.com/sfMEjqf.png);
   background-size: cover;
   margin: 0 auto;
   outline: 7px solid #141414;
@@ -16,7 +16,7 @@
   position: relative;
 }
 .max-sig:hover {
-  background-image: url(https://i.imgur.com/yfMS0TB.png);
+  background-image: url(https://i.imgur.com/EDTLpM5.png);
 }
 .max-sig:hover .m-tit {
   left: -15px;
