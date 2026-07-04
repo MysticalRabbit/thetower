@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cabin:ital,wght@0,400..700;1,400..700&display=swap");
+
+.hysterio-sig-1 {
+  position: relative;
+  width: 240px;
+  height: 180px;
+  margin: 0 auto;
+  outline: 2px solid var(--c);
+  outline-offset: 4px;
+  overflow: hidden;
+  transition: 0.5s ease;
+  background-color: black;
+}
+.hysterio-sig-1 .pj-img {
+  width: 100%;
+  height: 200%;
+  background-size: cover;
+  position: absolute;
+  top: -10px;
+  transition: 1s;
+}
+.hysterio-sig-1:hover .pj-img {
+  top: -100%;
+  filter: blur(2px);
+  opacity: 0.5;
+}
+.hysterio-sig-1 .pj-cont {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  color: #eee;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-transform: uppercase;
+  gap: 5px;
+}
+.hysterio-sig-1 .pj-cont:after {
+  content: "";
+  width: 120%;
+  height: 120%;
+  z-index: 2;
+  position: absolute;
+  top: -5px;
+  border: 1px solid var(--c);
+  transition: 0.5s 0.3s ease;
+  opacity: 1;
+}
+.hysterio-sig-1 .pj-cont .pj-tit {
+  font: 400 28px/110% "Bodoni Moda";
+  padding: 0 20px;
+  opacity: 0;
+  filter: blur(2px);
+  transition: 0.3s;
+}
+.hysterio-sig-1 .pj-cont .pj-txt {
+  font: 400 6px/140% "Cabin", sans-serif;
+  letter-spacing: 3px;
+  opacity: 0;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+.hysterio-sig-1 .pj-cont .pj-txt i {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.hysterio-sig-1:hover {
+  outline-offset: 0;
+}
+.hysterio-sig-1:hover .pj-tit {
+  opacity: 1;
+  filter: blur(0);
+  transition: 0.5s 0.8s;
+}
+.hysterio-sig-1:hover .pj-txt {
+  opacity: 1;
+  margin-top: 0;
+  transition: 0.5s 1s;
+}
+.hysterio-sig-1:hover .pj-cont:after {
+  width: 80%;
+}
