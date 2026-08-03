@@ -1,0 +1,89 @@
+.tabla-datos {
+  display: grid;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+.tabla-datos > br {
+  display: none !important;
+}
+.tabla-datos > span:nth-of-type(even) {
+  text-align: right;
+}
+.tabla-datos > span:nth-of-type(odd) {
+  font-weight: 600 !important;
+  color: var(--c);
+}
+.tabla-datos span.tabicon.gradientact {
+  height: 3em;
+  margin: 0 10px 0 0;
+}
+.dople > span {
+  display: flex;
+  align-items: center;
+}
+.dople p {
+  margin: 0;
+  font-weight: 400 !important;
+  color: var(--text);
+}
+.dople {
+  gap: 15px;
+}
+.dople span span {
+  text-align: left !important;
+  line-height: 100%;
+}
+.baul-title {
+  font: 700 1.6em var(--f-deco);
+  color: var(--c);
+  text-transform: uppercase;
+}
+.max-baul-rep {
+  position: absolute;
+  z-index: 10;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+audio {
+  position: relative;
+  top: -7px;
+  left: -6px;
+}
+.postprofile {
+  display: none;
+}
+#bamain {
+  justify-content: space-between;
+}
+.baleft {
+  width: 100%;
+}
+.a-regalo > span {
+  border: var(--border1);
+  background: var(--mainbg6);
+  max-width: 540px;
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+#bextras {
+  box-sizing: border-box;
+  padding: 2em;
+  overflow: auto;
+}
+.regalos {
+  display: flex;
+  gap: 1em;
+}
+.baleft q {
+  line-height: 1.4em !important;
+}
