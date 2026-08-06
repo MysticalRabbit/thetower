@@ -15,7 +15,7 @@
   height: 200px;
   background: url(https://i.imgur.com/F3WWFcy.png) #000;
   margin: 0 auto;
-  outline: #141414 solid 1px;
+  outline: #262626 solid 1px;
   outline-offset: 15px;
   display: flex;
   flex-direction: column;
@@ -26,7 +26,7 @@
 }
 .max-sig b {
   font: 800 40px "Bodoni Moda";
-  color: #fff;
+  color: #fff !important;
   text-shadow: 0 0 20px #fff;
   letter-spacing: normal;
   z-index: 1;
@@ -59,7 +59,7 @@
   background: #101010;
   display: table;
   margin: 9px auto;
-  padding: 0 5px;
+  padding: 0 10px;
 }
 .max-bor,
 .max-sig {
