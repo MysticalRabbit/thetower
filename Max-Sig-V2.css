@@ -15,7 +15,7 @@
   height: 200px;
   background: url(https://i.imgur.com/F3WWFcy.png) #000;
   margin: 0 auto;
-  outline: #262626 solid 1px;
+  outline: #1c1c1c solid 1px;
   outline-offset: 15px;
   display: flex;
   flex-direction: column;
