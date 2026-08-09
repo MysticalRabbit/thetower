@@ -87,3 +87,27 @@ audio {
 .baleft q {
   line-height: 1.4em !important;
 }
+.baul .bapj p {
+  padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  border: 1em !important;
+}
+.baul p em {
+  font-size: 2em;
+  color: var(--c) !important;
+}
+.baul .bapj > b {
+  top: 45% !important;
+  transform: translateY(-100%);
+  font-size: 1em;
+  font: 700 1.2em var(--f-deco) !important;
+  text-align: center;
+}
+.baul .bapj:hover > b {
+  top: 145% !important;
+}
