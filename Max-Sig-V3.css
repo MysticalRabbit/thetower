@@ -63,7 +63,7 @@
 .max-script {
   position: absolute;
   left: 21%;
-  top: 31.5%;
+  top: 34%;
   white-space: nowrap;
   font-family: "Firma Zapfino", Zapfino, cursive;
   font-size: 8cqw;
@@ -74,11 +74,11 @@
 .max-title {
   position: absolute;
   left: 21%;
-  top: 50%;
+  top: 51%;
   font-family: "Firma Paseo", "Paseo", Georgia, serif;
   font-weight: 700;
   font-size: 9.667cqw;
-  line-height: .9483;
+  line-height: 0.9;
   letter-spacing: -.065em;
 }
 .max-title span { display: block; }
