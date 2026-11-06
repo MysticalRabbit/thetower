@@ -1,21 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Arimo:wght@400&display=swap");
-
 @font-face {
-  font-family: "Firma Zapfino";
+  font-family: "Max Zapfino Ajustada";
   src: url("https://mysticalrabbit.github.io/thetower/zapfino.woff2") format("woff2");
   font-display: swap;
   ascent-override: 100%;
   descent-override: 0%;
   line-gap-override: 0%;
 }
-
 @font-face {
   font-family: "Firma Paseo";
   src: url("https://mysticalrabbit.github.io/thetower/paseo-bold.woff2") format("woff2"), local("Paseo Bold"), local("Paseo-Bold");
   font-weight: 700;
   font-display: swap;
 }
-
 .max-signature {
   box-sizing: border-box;
   position: relative;
@@ -26,19 +23,10 @@
   isolation: isolate;
   container-type: inline-size;
   background: #777b89;
-}
 
-.max-signature:focus-visible {
-  outline: 1px solid var(--ink, #fff);
-  outline-offset: 7px;
 }
-
-.max-artwork {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-}
-
+.max-signature:focus-visible { outline: 1px solid var(--ink, #fff); outline-offset: 7px; }
+.max-artwork { position: absolute; inset: 0; overflow: hidden; }
 .max-portrait {
   position: absolute;
   inset: 0;
@@ -47,11 +35,7 @@
   filter: var(--grade, brightness(1));
   transition: filter 900ms ease;
 }
-
-.max-signature:is(:hover, :focus-visible, .max-is-preview) .max-portrait {
-  filter: var(--grade, brightness(1)) blur(.65px);
-}
-
+.max-signature:is(:hover, :focus-visible, .max-is-preview) .max-portrait { filter: var(--grade, brightness(1)) blur(.65px); }
 .max-statue {
   position: absolute;
   top: 0;
@@ -63,13 +47,11 @@
   transition: transform 1100ms cubic-bezier(.22,.75,.25,1);
   pointer-events: none;
 }
-
 .max-statue-image {
   display: block;
   width: 100%;
   height: auto;
 }
-
 .max-signature::after {
   content: "";
   position: absolute;
@@ -80,35 +62,20 @@
   pointer-events: none;
   transition: inset 800ms cubic-bezier(.22,.75,.25,1), border-width 800ms ease, border-color 800ms ease;
 }
-
-.max-signature:is(:hover, :focus-visible, .max-is-preview)::after {
-  inset: 5px;
-  border-width: 2px;
-  border-color: var(--frame, rgba(255, 255, 255, .55));
-}
-
-.max-lettering {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  color: var(--ink, #fff);
-  pointer-events: none;
-}
-
+.max-signature:is(:hover, :focus-visible, .max-is-preview)::after { inset: 5px; border-width: 2px; border-color: var(--frame, rgba(255, 255, 255, .55)); }
+.max-lettering { position: absolute; inset: 0; z-index: 2; color: var(--ink, #fff); pointer-events: none; }
 .max-script {
   position: absolute;
   left: 21%;
   top: 68px;
   white-space: nowrap;
-  font-family: "Firma Zapfino", Zapfino, cursive;
+  font-family: "Max Zapfino Ajustada";
   font-size: 8cqw;
   line-height: 1;
   font-weight: 400;
   font-synthesis: none;
   z-index: 2;
-  color: var(--script, var(--ink, #fff));
 }
-
 .max-title {
   position: absolute;
   left: 21%;
@@ -116,15 +83,10 @@
   font-family: "Firma Paseo", "Paseo", Georgia, serif;
   font-weight: 700;
   font-size: 9.667cqw;
-  line-height: .9;
+  line-height: 0.9;
   letter-spacing: -.065em;
-  color: var(--title, var(--ink, #fff));
 }
-
-.max-title span {
-  display: block;
-}
-
+.max-title span { display: block; }
 .max-lyrics {
   position: absolute;
   left: calc(61% - 5px);
@@ -134,40 +96,23 @@
   align-items: center;
   font: 400 3cqw/1.0889 Arimo, Arial, Helvetica, sans-serif;
   letter-spacing: -.025em;
-  color: var(--lyrics, var(--ink, #fff));
 }
-
-.max-script,
-.max-title,
-.max-lyrics {
+.max-script, .max-title, .max-lyrics {
   opacity: 0;
   filter: blur(5px);
   transform: translateY(14px);
   transition: opacity 500ms ease, transform 800ms cubic-bezier(.22,.75,.25,1), filter 700ms ease;
 }
-
-.max-signature:is(:hover, :focus-visible, .max-is-preview) .max-statue {
-  transform: translateX(21.62%);
+.max-signature:is(:hover, :focus-visible, .max-is-preview) .max-statue { transform: translateX(21.62%); }
+.max-signature:is(:hover, :focus-visible, .max-is-preview) :is(.max-script, .max-title, .max-lyrics) { opacity: 1; filter: blur(0); transform: translateY(0); }
+.max-signature:is(:hover, :focus-visible, .max-is-preview) .max-script { transition-delay: 180ms; }
+.max-signature:is(:hover, :focus-visible, .max-is-preview) .max-title { transition-delay: 320ms; }
+.max-signature:is(:hover, :focus-visible, .max-is-preview) .max-lyrics { transition-delay: 480ms; }
+@media (prefers-reduced-motion: reduce) {
+  .max-signature::after, .max-signature .max-portrait, .max-signature .max-statue, .max-signature .max-script, .max-signature .max-title, .max-signature .max-lyrics { transition-duration: 1ms; transition-delay: 0ms; }
 }
 
-.max-signature:is(:hover, :focus-visible, .max-is-preview) :is(.max-script, .max-title, .max-lyrics) {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateY(0);
-}
-
-.max-signature:is(:hover, :focus-visible, .max-is-preview) .max-script {
-  transition-delay: 180ms;
-}
-
-.max-signature:is(:hover, :focus-visible, .max-is-preview) .max-title {
-  transition-delay: 320ms;
-}
-
-.max-signature:is(:hover, :focus-visible, .max-is-preview) .max-lyrics {
-  transition-delay: 480ms;
-}
-
+/* Paletas: los colores y el tratamiento de foto cambian juntos. */
 .max-signature::before {
   content: "";
   position: absolute;
@@ -175,52 +120,29 @@
   background: var(--veil, transparent);
   pointer-events: none;
 }
-
+.max-script { color: var(--script, var(--ink, #fff)); }
+.max-title { color: var(--title, var(--ink, #fff)); }
+.max-lyrics { color: var(--lyrics, var(--ink, #fff)); }
 .max-theme-ivory {
-  --ink: #f4ead6;
-  --frame: #e8d6ad99;
+  --ink: #f4ead6; --frame: #e8d6ad99;
   --grade: saturate(.72) brightness(.86) sepia(.12);
 }
-
 .max-theme-gold {
-  --ink: #f5ebd5;
-  --script: #d7b47c;
-  --frame: #b98b4f;
+  --ink: #f5ebd5; --script: #d7b47c; --frame: #b98b4f;
   --grade: brightness(1);
 }
-
 .max-theme-burgundy {
-  --ink: #fff0dd;
-  --script: #e8bcb8;
-  --frame: #bd797baa;
+  --ink: #fff0dd; --script: #e8bcb8; --frame: #bd797baa;
   --grade: saturate(.6) brightness(.72) sepia(.18);
   --veil: linear-gradient(120deg, #571c2e38, #3a101c25);
 }
-
 .max-theme-olive {
-  --ink: #efe9cf;
-  --script: #d5d7a8;
-  --frame: #bbc18c99;
+  --ink: #efe9cf; --script: #d5d7a8; --frame: #bbc18c99;
   --grade: saturate(.5) brightness(.72) sepia(.28);
   --veil: linear-gradient(120deg, #323c1833, #29351b18);
 }
-
 .max-theme-moon {
-  --ink: #eaf1f5;
-  --script: #bddce9;
-  --frame: #b1cbd8aa;
+  --ink: #eaf1f5; --script: #bddce9; --frame: #b1cbd8aa;
   --grade: saturate(.32) brightness(.77);
   --veil: linear-gradient(120deg, #17334c22, transparent);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .max-signature::after,
-  .max-signature .max-portrait,
-  .max-signature .max-statue,
-  .max-signature .max-script,
-  .max-signature .max-title,
-  .max-signature .max-lyrics {
-    transition-duration: 1ms;
-    transition-delay: 0ms;
-  }
 }
